@@ -1,0 +1,16 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+.env.local
+.env.example
+.git
+.gitignore
+.next
+.vercel
+dist
+*.log
+.DS_Store
+*.tgz
+*.tar.gz
