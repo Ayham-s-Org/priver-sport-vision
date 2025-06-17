@@ -53,20 +53,20 @@ NODE_ENV=development
 Run the entire stack with Docker Compose:
 
 ```bash
-# Start all services (Next.js app + PostgreSQL + Supabase)
-docker-compose up -d
+# Start all services (Next.js app + PostgreSQL + Redis)
+docker compose up -d
 
 # View logs
-docker-compose logs -f app
+docker compose logs -f app
 
 # Stop all services
-docker-compose down
+docker compose down
 ```
 
 The application will be available at:
 - **Next.js App**: http://localhost:3000
 - **PostgreSQL**: localhost:54322
-- **Supabase Studio**: http://localhost:54321
+- **Redis**: localhost:6379
 
 ### 4. Local Development (Alternative)
 
@@ -108,9 +108,9 @@ npm run start        # Start production server
 npm run lint         # Run ESLint
 
 # Docker
-docker-compose up                    # Start all services
-docker-compose -f docker-compose.dev.yml up  # Development mode
-docker-compose down                  # Stop all services
+docker compose up                    # Start all services
+docker compose -f docker-compose.dev.yml up  # Development mode
+docker compose down                  # Stop all services
 ```
 
 ## 🐳 Docker Deployment
@@ -119,14 +119,14 @@ docker-compose down                  # Stop all services
 
 ```bash
 # Build and run production container
-docker-compose -f docker-compose.yml up --build
+docker compose -f docker-compose.yml up --build
 ```
 
 ### Development with Hot Reload
 
 ```bash
 # Run development environment with hot reload
-docker-compose -f docker-compose.dev.yml up --build
+docker compose -f docker-compose.dev.yml up --build
 ```
 
 ## 🔐 Authentication

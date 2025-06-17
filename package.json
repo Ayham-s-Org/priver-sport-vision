@@ -7,9 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "docker:dev": "docker-compose -f docker-compose.dev.yml up --build",
-    "docker:prod": "docker-compose up --build",
-    "docker:down": "docker-compose down"
+    "docker:dev": "docker compose -f docker-compose.dev.yml up --build",
+    "docker:prod": "docker compose up --build",
+    "docker:down": "docker compose down"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.2",

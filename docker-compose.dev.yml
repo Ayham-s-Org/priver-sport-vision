@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # Next.js Development Server
   app:
@@ -44,24 +42,6 @@ services:
       retries: 5
     networks:
       - app-network
-
-  # Supabase CLI (for local development)
-  supabase:
-    image: supabase/cli:latest
-    container_name: supabase-dev
-    ports:
-      - "54321:54321"
-      - "54323:54323"
-      - "54324:54324"
-    environment:
-      - SUPABASE_DB_URL=postgresql://postgres:postgres@db:5432/postgres
-    depends_on:
-      db:
-        condition: service_healthy
-    networks:
-      - app-network
-    volumes:
-      - ./supabase:/app/supabase
 
 volumes:
   postgres_data:
